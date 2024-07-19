@@ -1,3 +1,9 @@
+window.onload = function() {
+    setTimeout(function() {
+      document.querySelector('.loader-container').style.display = 'none';
+    }, 3000); 
+  };
+
 var w = c.width = window.innerWidth,
 		h = c.height = window.innerHeight,
 		ctx = c.getContext( '2d' ),
@@ -6,7 +12,7 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: [ 'HAPPY', 'BIRTHDAY!','TO','ME!'],
+			strings: ['🌟', 'HAPPY', 'BIRTHDAY!','TO','ME!','🌟'],
 			charSize: 35,
 			charSpacing:30 ,
 			lineHeight: 40,
@@ -55,7 +61,7 @@ var w = c.width = window.innerWidth,
 		
 		letters = [];
 
-ctx.font = opts.charSize + 'px poppins';
+ctx.font = opts.charSize + 'px Permanent Marker';
 
 function Letter( char, x, y ){
 	this.char = char;
@@ -360,13 +366,13 @@ function anim(){
 	
 	window.requestAnimationFrame( anim );
 	
-	ctx.fillStyle = '#1b6572';
-	ctx.fillRect( 0, 0, w, h );
+	ctx.fillStyle = '#11351e';
+	ctx.fillRect( 1, 1, w, h );
 	
 	ctx.translate( hw, hh );
 	
 	var done = true;
-	for( var l = 0; l < letters.length; ++l ){
+	for( var l = 0; l < letters.length; ++l ){ 
 		
 		letters[ l ].step();
 		if( letters[ l ].phase !== 'done' )
@@ -398,5 +404,5 @@ window.addEventListener( 'resize', function(){
 	hw = w / 2;
 	hh = h / 2;
 	
-	ctx.font = opts.charSize + 'px poppins';
+	ctx.font = opts.charSize + 'px Permanent Marker';
 })
