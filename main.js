@@ -8,7 +8,7 @@ var w = c.width = window.innerWidth,
 		opts = {
 			strings: [ 'HAPPY', 'BIRTHDAY!','TO','ME!'],
 			charSize: 35,
-			charSpacing: 25,
+			charSpacing:30 ,
 			lineHeight: 40,
 			
 			cx: w / 2,
@@ -55,7 +55,7 @@ var w = c.width = window.innerWidth,
 		
 		letters = [];
 
-ctx.font = opts.charSize + 'px Verdana';
+ctx.font = opts.charSize + 'px poppins';
 
 function Letter( char, x, y ){
 	this.char = char;
@@ -70,9 +70,9 @@ function Letter( char, x, y ){
 	var hue = x / calc.totalWidth * 360;
 	
 	this.color = 'hsl(hue,80%,50%)'.replace( 'hue', hue );
-	this.lightAlphaColor = 'hsla(hue,80%,light%,alp)'.replace( 'hue', hue );
+	this.lightAlphaColor = 'hsla(hue,70%,light%,alp)'.replace( 'hue', hue );
 	this.lightColor = 'hsl(hue,80%,light%)'.replace( 'hue', hue );
-	this.alphaColor = 'hsla(hue,80%,50%,alp)'.replace( 'hue', hue );
+	this.alphaColor = 'hsla(hue,60%,50%,alp)'.replace( 'hue', hue );
 	
 	this.reset();
 }
@@ -232,11 +232,11 @@ Letter.prototype.step = function(){
 					vel = opts.balloonBaseVel + opts.balloonAddedVel * Math.random();
 			
 			this.vx = Math.cos( rad ) * vel;
-			this.vy = Math.cos( rad ) * vel;
+			this.vy = Math.sin( rad ) * vel;
 		}
 	} else if( this.phase === 'balloon' ){
 			
-		ctx.strokeStyle = this.lightColor.replace( 'light', 90 );
+		ctx.strokeStyle = this.lightColor.replace( 'light', 60 );
 		
 		if( this.spawning ){
 			
@@ -360,7 +360,7 @@ function anim(){
 	
 	window.requestAnimationFrame( anim );
 	
-	ctx.fillStyle = '#1b6572,#5f0b95';
+	ctx.fillStyle = '#1b6572';
 	ctx.fillRect( 0, 0, w, h );
 	
 	ctx.translate( hw, hh );
