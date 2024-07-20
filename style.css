@@ -18,7 +18,7 @@ body {
      justify-content: center;
      align-items: center;
      height: 100vh;
-     background-color:black;
+     background-color:rgb(43, 42, 42);
    }
    .loader-container{
            width: 100%;
@@ -29,7 +29,7 @@ body {
            top: 0;
            left: 0;
            align-items: center;
-           background-color: #000;
+           background-color: #2e2d2d;
            z-index: 9999; 
        } 
 
@@ -49,3 +49,4 @@ body {
        
    }
 }
+  

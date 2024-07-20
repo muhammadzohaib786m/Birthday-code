@@ -12,9 +12,9 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: ['🌟', 'HAPPY', 'BIRTHDAY!','TO','ME!','🌟'],
-			charSize: 35,
-			charSpacing:30 ,
+			strings: ['🌟', 'HAPPY', 'BIRTHDAY!','TO','ME!'],
+			charSize: 33,
+			charSpacing:32 ,
 			lineHeight: 40,
 			
 			cx: w / 2,
@@ -35,7 +35,7 @@ var w = c.width = window.innerWidth,
 			fireworkBaseShards: 5,
 			fireworkAddedShards: 5,
 			fireworkShardPrevPoints: 3,
-			fireworkShardBaseVel: 4,
+			fireworkShardBaseVel: 7,
 			fireworkShardAddedVel: 2,
 			fireworkShardBaseSize: 3,
 			fireworkShardAddedSize: 3,
@@ -366,7 +366,7 @@ function anim(){
 	
 	window.requestAnimationFrame( anim );
 	
-	ctx.fillStyle = '#11351e';
+	ctx.fillStyle = '#1d2856';
 	ctx.fillRect( 1, 1, w, h );
 	
 	ctx.translate( hw, hh );
