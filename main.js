@@ -1,7 +1,7 @@
 window.onload = function() {
     setTimeout(function() {
       document.querySelector('.loader-container').style.display = 'none';
-    }, 3000); 
+    }, 3500); 
   };
 
 var w = c.width = window.innerWidth,
@@ -12,7 +12,7 @@ var w = c.width = window.innerWidth,
 		hh = h / 2,
 		
 		opts = {
-			strings: ['🌟', 'HAPPY', 'BIRTHDAY!','TO','ME!'],
+			strings: ['🌟', 'HAPPY', 'BIRTHDAY','TO','ME:)'],
 			charSize: 33,
 			charSpacing:32 ,
 			lineHeight: 40,
